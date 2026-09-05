@@ -9,6 +9,9 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInputX;
 
+    public Animator anim;
+    private SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,6 +38,6 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        anim.SetFloat("playerSpeed", Mathf.Abs(rb.linearVelocityX));
     }
 }

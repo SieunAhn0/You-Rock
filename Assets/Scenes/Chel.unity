@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   moveSpeed: 6
+  anim: {fileID: 856142701}
 --- !u!95 &856142701
 Animator:
   serializedVersion: 7
