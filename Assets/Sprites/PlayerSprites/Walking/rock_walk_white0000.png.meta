@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 36d63e92e6814664c86146b4c491c481
+guid: 5b0b2f7a8a724ab4e803b9e1243e607f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3170936585338519149
-    second: rock_stand_white0000_0
+      213: 2459287321694392043
+    second: rock_walk_white0000_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock_stand_white0000_0
+      name: rock_walk_white0000_0
       rect:
         serializedVersion: 2
         x: 5
         y: 0
         width: 22
-        height: 25
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +117,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3918b99d9f19ef3d0800000000000000
-      internalID: -3170936585338519149
+      spriteID: bee473a0ac4212220800000000000000
+      internalID: 2459287321694392043
       vertices: []
       indices: 
       edges: []
@@ -127,7 +127,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -137,7 +137,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rock_stand_white0000_0: -3170936585338519149
+      rock_walk_white0000_0: 2459287321694392043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
