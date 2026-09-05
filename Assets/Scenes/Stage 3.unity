@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1659fcf60cb4a538a63019e0dfc6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  stage: 1
 --- !u!4 &225320006
 Transform:
   m_ObjectHideFlags: 0
@@ -313,7 +314,7 @@ GameObject:
   - component: {fileID: 605862128}
   - component: {fileID: 605862127}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: DropletDoor
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,7 +515,7 @@ GameObject:
   - component: {fileID: 1244558756}
   - component: {fileID: 1244558755}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: EndingDoor
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
