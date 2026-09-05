@@ -9,7 +9,7 @@ public class DoorTrigger : MonoBehaviour
     // Notice this uses 'Collider' directly instead of 'Collision'
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.LoadScene("DropletScene");
+            GameManager.Instance.LoadScene(DropletScene);
         }
     }
     
