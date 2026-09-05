@@ -3,16 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class DoorTrigger : MonoBehaviour
 {
-    [SerializeField] private string
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private string DropletScene;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other) {
+    // Notice this uses 'Collider' directly instead of 'Collision'
+        if (other.CompareTag("Player"))
+        {
+            GameManager.Instance.LoadScene("DropletScene");
+        }
     }
+    
 }
