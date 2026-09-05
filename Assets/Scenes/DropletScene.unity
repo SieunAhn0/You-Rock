@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 2009817378}
   - component: {fileID: 2009817377}
   m_Layer: 0
-  m_Name: Square
+  m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 2033553643}
   - component: {fileID: 2033553642}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 2033620149}
   - component: {fileID: 2033620148}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: DoorBacktoStage
   m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
