@@ -4,7 +4,18 @@ using UnityEngine.SceneManagement;
 public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] private string[] nextScenes = {"DropletScene", "Stage 1", "Stage 2", "Stage 3",};
+    [SerializeField] Animator anim;
 
+    private void Awake()
+    {
+        Debug.Log("awake");
+        GameObject player = GameObject.FindWithTag("Player");
+
+        // playerAnimator = player.GetComponent<Animator>();
+        anim = player.GetComponentInChildren<Animator>();
+        Debug.Log("received anim");
+        // anim = FindFirstObjectByType<Animator>();
+    }
     private void OnTriggerEnter2D(Collider2D other) {
     // Notice this uses 'Collider' directly instead of 'Collision'
         if (other.CompareTag("Player"))
@@ -21,6 +32,8 @@ public class DoorTrigger : MonoBehaviour
                 StageManager.Instance.stage++;
             }
 
+Debug.Log("current index" + index);
+            anim.SetInteger("Stage", index);
             StageManager.Instance.LoadScene(nextScenes[index]);
         }
     }

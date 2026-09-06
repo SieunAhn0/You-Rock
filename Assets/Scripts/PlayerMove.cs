@@ -22,6 +22,19 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        // anim.SetInteger("Stage", StageManager.Instance.stage);
+
+        switch (StageManager.Instance.stage) {
+            case 1 :
+                anim.Play("playerAnim0");
+                break;
+            case 2 :
+                anim.Play("playerAnim1");
+                break;
+            case 3 :
+                anim.Play("playerAnim2");
+                break;
+        }
     }
 
     // New Input System 콜백 (Player Input 컴포넌트의 Send Messages로 연결)
@@ -67,6 +80,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(rb.linearVelocityX);
         anim.SetFloat("playerSpeed", Mathf.Abs(rb.linearVelocityX));
         // Handle continuous footstep sound playback
         HandleFootsteps();
