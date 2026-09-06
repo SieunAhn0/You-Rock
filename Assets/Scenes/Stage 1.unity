@@ -314,17 +314,37 @@ PrefabInstance:
       value: ColorManager
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: tolerance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.b
-      value: 0.6666667
+      value: 0.21698111
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.g
-      value: 0.6666667
+      value: 0.21698111
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.r
-      value: 0.9960785
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: playerCurrentColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: playerCurrentColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: playerCurrentColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: currentStageNpcSprite
+      value: 
+      objectReference: {fileID: 1780194054}
     - target: {fileID: 6811709349168237196, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.30765
@@ -1140,6 +1160,11 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!212 &1780194054 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6159661888441047137, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
+  m_PrefabInstance: {fileID: 1439287764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1827090985
 GameObject:
   m_ObjectHideFlags: 0
