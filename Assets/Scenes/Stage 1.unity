@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.829
+      value: 5.57
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.y
@@ -364,6 +364,14 @@ PrefabInstance:
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013636036742709436, guid: aa47ed21a96258140aac3684025c4555, type: 3}
+      propertyPath: spawnX
+      value: 5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013636036742709436, guid: aa47ed21a96258140aac3684025c4555, type: 3}
+      propertyPath: spawnY
+      value: -2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -456,7 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bd453e45d41433ebc25ecab4169f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  DropletScene: DropletScene
+  nextScenes:
+  - DropletScene
 --- !u!70 &605862128
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1064,7 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bd453e45d41433ebc25ecab4169f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  DropletScene: Stage 2
+  nextScenes: []
 --- !u!70 &2022436458
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
