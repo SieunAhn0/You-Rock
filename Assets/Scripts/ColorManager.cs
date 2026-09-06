@@ -12,6 +12,7 @@ public class ColorManager : MonoBehaviour
     private byte tolerance = 30;
     public bool isMatched = false;
     public Color32[] colors;
+    public int colorIndex = 0;
     public Color32 targetNpcColor;
 
     // color and renders
@@ -44,13 +45,12 @@ public class ColorManager : MonoBehaviour
     public void SetTargetColor(Color32 npcColor)
     {
         targetNpcColor = npcColor;
-        Debug.Log("Target NPC color getted");
+        // Debug.Log("Target NPC color getted");
     }
 
     void Start()
     {
-        Debug.Log("index:" + (StageManager.Instance.stage - 1));
-        targetNpcColor = colors[0];
+        targetNpcColor = colors[colorIndex];
 
         int currentStage = StageManager.Instance.stage;
         string npcName = "Guard" + currentStage.ToString();;
@@ -66,7 +66,7 @@ public class ColorManager : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         playerSprite=player.GetComponentInChildren<SpriteRenderer>();
 
-        Debug.Log((Color32) playerSprite.color);
+        // Debug.Log((Color32) playerSprite.color);
         if(IsColorSimilar((Color32) playerSprite.color, targetNpcColor, tolerance))
         {
             isMatched = true;

@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 172517434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0813, y: -4.2273, z: 0}
+  m_LocalPosition: {x: -0.0813, y: -4.2273, z: 2.5}
   m_LocalScale: {x: 19.0174, y: 1.8746, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -398,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 605862126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.53, y: -2.8, z: 0}
+  m_LocalPosition: {x: 7.53, y: -2.8, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -509,6 +509,8 @@ MonoBehaviour:
   drop1: {fileID: 8300000, guid: a969d1444393b4bdfa2bba6e467cabae, type: 3}
   drop2: {fileID: 8300000, guid: 5415e7138e3504b0995aa756f78f70e2, type: 3}
   drop3: {fileID: 8300000, guid: d50c5c95a2b884e41af67a79c6ad11c4, type: 3}
+  win: {fileID: 0}
+  lose: {fileID: 0}
   masterSoundVolume: 1
 --- !u!4 &864731769
 Transform:
@@ -928,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1244558754}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -2.8, z: 0}
+  m_LocalPosition: {x: -7, y: -2.8, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1060,11 +1062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6262691632888060813, guid: cb076dbbd6c989347884b7c8958c6123, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 6262691632888060813, guid: cb076dbbd6c989347884b7c8958c6123, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6262691632888060813, guid: cb076dbbd6c989347884b7c8958c6123, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1165,7 +1167,7 @@ GameObject:
   - component: {fileID: 1827090988}
   m_Layer: 0
   m_Name: Guard3
-  m_TagString: Untagged
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

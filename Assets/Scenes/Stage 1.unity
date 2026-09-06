@@ -250,7 +250,7 @@ Transform:
   m_GameObject: {fileID: 172517434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0813, y: -4.2273, z: 0}
+  m_LocalPosition: {x: -0.0813, y: -4.2273, z: 2.5}
   m_LocalScale: {x: 19.0174, y: 1.8746, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -698,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 605862126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.53, y: -2.8, z: 1}
+  m_LocalPosition: {x: 7.53, y: -2.8, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1000,15 +1000,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719910415100226241, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 6719910415100226241, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 6719910415100226241, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6719910415100226241, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1265,7 +1265,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.90363586, y: -0.22678137}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1275,7 +1275,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.27, y: 2.56}
+  m_Size: {x: 2.416536, y: 3.0135627}
   m_EdgeRadius: 0
 --- !u!1 &2022436456
 GameObject:
@@ -1419,7 +1419,7 @@ Transform:
   m_GameObject: {fileID: 2022436456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -2.8, z: 1}
+  m_LocalPosition: {x: -7, y: -2.8, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

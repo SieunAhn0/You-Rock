@@ -14,6 +14,10 @@ public class DoorTrigger : MonoBehaviour
                 index = StageManager.Instance.stage;
             } else if (gameObject.tag == "nextStage") {
                 index = StageManager.Instance.stage + 1;
+                ColorManager.Instance.isMatched = false;
+                ColorManager.Instance.colorIndex++;
+                int colorIndex = Mathf.Min(2, ColorManager.Instance.colorIndex);
+                ColorManager.Instance.targetNpcColor = ColorManager.Instance.colors[colorIndex];
                 StageManager.Instance.stage++;
             }
 
