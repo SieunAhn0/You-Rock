@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 1404172251}
   SFXSource: {fileID: 807451122}
+  dropletBGMs: []
   tracks:
   - {fileID: 8300000, guid: cda69a5d32bc543d688f588ec6f0978e, type: 3}
   - {fileID: 8300000, guid: 7914d5a1ea7aa4cb4842227a186b6c33, type: 3}
@@ -707,8 +708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   backgroundTextures:
-  - {fileID: 2800000, guid: 351c04984c995410c98e7ee56effe14e, type: 3}
-  - {fileID: 2800000, guid: 0a52f9a6a686d49e0b897dc7b0b2f616, type: 3}
+  - {fileID: 2800000, guid: 495cb5a69e55c4a1b97d981406d520a5, type: 3}
+  - {fileID: 2800000, guid: 5cd8a3685523043599dbdfa4d4972554, type: 3}
   - {fileID: 2800000, guid: 5b0bd93309dd94578a435cdb51a159e0, type: 3}
 --- !u!1 &807451121
 GameObject:
