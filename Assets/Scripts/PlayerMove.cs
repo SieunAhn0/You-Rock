@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
@@ -33,19 +34,18 @@ public class PlayerMove : MonoBehaviour
     {
         // Y축 속도는 기존 중력/점프 상태를 유지하고, X축 속도만 변경
         rb.linearVelocity = new Vector2(moveInputX * moveSpeed, rb.linearVelocity.y);
-        if(moveInputX>0)
+        if(moveInputX > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            spriteRenderer.flipX = false;
         }
         else if(moveInputX<0)
         {
-            transform.localScale= new Vector3(-1, 1, 1);
+            spriteRenderer.flipX = true;
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
     }
 

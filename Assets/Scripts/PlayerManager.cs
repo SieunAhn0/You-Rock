@@ -5,19 +5,20 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance { get; private set; }
 
     private SpriteRenderer playerSpriteRenderer;
+    public float spawnX;
 
 
     void Awake()
     {
-        if(Instance==null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        // if(Instance==null)
+        // {
+        //     Instance = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
