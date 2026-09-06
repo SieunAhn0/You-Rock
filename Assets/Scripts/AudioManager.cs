@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip drop2;
     public AudioClip drop3;
     
-    private void start() {
+     void Start() {
         musicSource.clip = tracks[0];
         musicSource.Play();
     }
