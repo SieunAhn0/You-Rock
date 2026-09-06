@@ -4,7 +4,8 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance { get; private set; }
 
-    [SerializeField] private GameObject[] stagePlayerPrefabs;
+    private SpriteRenderer playerSpriteRenderer;
+
 
     void Awake()
     {
@@ -21,7 +22,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        playerSpriteRenderer = this.GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,17 +31,21 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-    public void SpawnPlayerForStage(int stageIndex, Vector3 spawnPosition)
-    {
-        if(stageIndex<stagePlayerPrefabs.Length)
-        {
-            GameObject player = Instantiate(stagePlayerPrefabs[stageIndex], spawnPosition, Quaternion.identity);
-        }
-    }
-
+    
     void OnTriggerEnter2D(Collider2D collider) {
+
+        SpriteRenderer targetSprite = collider.GetComponent<SpriteRenderer>();
+
+
         if (collider.gameObject.tag == "droplet") {
-            Destroy(collider.gameObject);
+
+            if(targetSprite!=null)
+            {
+                playerSpriteRenderer.color = targetSprite.color;
+            }
+            Destroy(collider.gameObject);//doplet delete
         }
+
     }
+    
 }
