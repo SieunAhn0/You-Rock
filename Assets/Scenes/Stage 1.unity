@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2bd453e45d41433ebc25ecab4169f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  DropletScene: DropletScene
+  DropletScene: Si
 --- !u!70 &605862128
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
