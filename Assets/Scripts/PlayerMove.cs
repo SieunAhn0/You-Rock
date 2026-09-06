@@ -9,8 +9,11 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInputX;
 
+
     public Animator anim;
     private SpriteRenderer spriteRenderer;
+
+    public bool clearTrigger = false;   //for guard
 
     AudioManager audioManager;
     [SerializeField] private float stepInterval = 0.4f; // Time in seconds between footsteps
@@ -20,6 +23,8 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
+        
     }
 
     // New Input System 콜백 (Player Input 컴포넌트의 Send Messages로 연결)
@@ -57,6 +62,28 @@ public class PlayerMove : MonoBehaviour
         HandleFootsteps();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Guard"))
+        {
+            Debug.Log("Guard decteted");
+            if (clearTrigger == true) //stage unlocked
+            {
+                collision.collider.isTrigger = true;//make the guard collider isTrigger on
+
+            }
+            else
+            {
+                Debug.Log("stage not unlocked");
+            }
+
+        }
+    }
+
+    void StageColor()
+    {
+        
+    }
 
     private void HandleFootsteps()
     {

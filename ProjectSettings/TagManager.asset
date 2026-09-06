@@ -8,6 +8,7 @@ TagManager:
   - nextStage
   - droplet
   - Audio
+  - Guard
   layers:
   - Default
   - TransparentFX
