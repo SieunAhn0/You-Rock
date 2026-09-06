@@ -161,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
   spawnX: 0
   spawnY: 0
+  lerpFactor: 0.2
 --- !u!1 &6720296547539361565
 GameObject:
   m_ObjectHideFlags: 0

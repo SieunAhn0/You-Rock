@@ -9,20 +9,20 @@ public class ColorManager : MonoBehaviour
 
     // default settings
     [SerializeField]
-    private byte tolerance = 30;
+    public float tolerance = 0.2f;
     public bool isMatched = false;
-    public Color32[] colors;
+    public Color[] colors;
     public int colorIndex = 0;
-    public Color32 targetNpcColor;
+    public Color targetNpcColor;
 
     // color and renders
-    public Color32 playerCurrentColor = Color.white;
+    public Color playerCurrentColor = Color.white;
     private SpriteRenderer playerSprite;
     public bool hasSavedPlayerColor = false;
     // [SerializeField]
     // private SpriteRenderer currentStageNpcSprite;
 
-    public void SavePlayerColor(Color32 col)
+    public void SavePlayerColor(Color col)
     {
         playerCurrentColor = col;
         hasSavedPlayerColor = true;
@@ -42,7 +42,7 @@ public class ColorManager : MonoBehaviour
         }
     }
 
-    public void SetTargetColor(Color32 npcColor)
+    public void SetTargetColor(Color npcColor)
     {
         targetNpcColor = npcColor;
         // Debug.Log("Target NPC color getted");
@@ -66,8 +66,8 @@ public class ColorManager : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         playerSprite=player.GetComponentInChildren<SpriteRenderer>();
 
-        // Debug.Log((Color32) playerSprite.color);
-        if(IsColorSimilar((Color32) playerSprite.color, targetNpcColor, tolerance))
+        // Debug.Log((Color) playerSprite.color);
+        if(IsColorSimilar((Color) playerSprite.color, targetNpcColor, tolerance))
         {
             isMatched = true;
             Debug.Log("color matched");
@@ -75,7 +75,7 @@ public class ColorManager : MonoBehaviour
         }
     }
 
-    private bool IsColorSimilar(Color32 a, Color32 b, byte maxDiff)
+    private bool IsColorSimilar(Color a, Color b, float maxDiff)
     {
         return (Mathf.Abs(a.r - b.r) <= maxDiff) &&
                (Mathf.Abs(a.g - b.g) <= maxDiff) &&
