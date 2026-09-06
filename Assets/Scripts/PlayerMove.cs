@@ -52,6 +52,19 @@ public class PlayerMove : MonoBehaviour
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
+
+        if (ColorManager.Instance != null && ColorManager.Instance.hasSavedPlayerColor)
+        {
+            spriteRenderer.color = ColorManager.Instance.playerCurrentColor;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (ColorManager.Instance != null && spriteRenderer != null)
+        {
+            ColorManager.Instance.SavePlayerColor(spriteRenderer.color);
+        }
     }
 
     // Update is called once per frame
@@ -74,7 +87,9 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                Debug.Log("stage not unlocked"+spriteRenderer.color);
+                Debug.Log("stage not unlocked"+spriteRenderer.color+"\n"
+                    +ColorManager.Instance.targetNpcColor
+                    );
             }
 
         }

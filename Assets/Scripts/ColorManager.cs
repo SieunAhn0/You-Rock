@@ -5,9 +5,19 @@ public class ColorManager : MonoBehaviour
 {
     public static ColorManager Instance { get; private set; }
 
+    
+
     public bool IsMatched { get; private set; } = false;
 
     public Color targetNpcColor = Color.white;
+    public Color playerCurrentColor = Color.white;
+    public bool hasSavedPlayerColor = false;
+
+    public void SavePlayerColor(Color col)
+    {
+        playerCurrentColor = col;
+        hasSavedPlayerColor = true;
+    }
 
     private void Awake()
     {
