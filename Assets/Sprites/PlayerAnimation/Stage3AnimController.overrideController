@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stage3AnimController
+  m_Controller: {fileID: 9100000, guid: a086665bf50d9b84b8a7f05a5292b25c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 5e7e0b879481b67449c0440adf013845, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5c72bf259b14142468187620cbae8e0e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cf6562d87107d3d4294d66cb759db4da, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 50049d61832b85f43a794fefd5deae4f, type: 2}
