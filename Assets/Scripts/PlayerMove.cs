@@ -57,6 +57,7 @@ public class PlayerMove : MonoBehaviour
         HandleFootsteps();
     }
 
+
     private void HandleFootsteps()
     {
         // Play footsteps only when moving horizontally
