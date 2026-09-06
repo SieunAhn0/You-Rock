@@ -38,8 +38,9 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
+    void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.gameObject.tag == "droplet") {
+            Destroy(collider.gameObject);
+        }
     }
 }
