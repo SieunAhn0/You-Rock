@@ -12,9 +12,14 @@ public class PlayerMove : MonoBehaviour
     public Animator anim;
     private SpriteRenderer spriteRenderer;
 
+    AudioManager audioManager;
+    [SerializeField] private float stepInterval = 0.4f; // Time in seconds between footsteps
+    private float stepTimer;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // New Input System 콜백 (Player Input 컴포넌트의 Send Messages로 연결)
@@ -48,5 +53,29 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         anim.SetFloat("playerSpeed", Mathf.Abs(rb.linearVelocityX));
+        // Handle continuous footstep sound playback
+        HandleFootsteps();
+    }
+
+    private void HandleFootsteps()
+    {
+        // Play footsteps only when moving horizontally
+        if (Mathf.Abs(moveInputX) > 0.1f)
+        {
+            stepTimer -= Time.deltaTime;
+            if (stepTimer <= 0f)
+            {
+                if (audioManager != null)
+                {
+                    audioManager.PlaySFX(0.8f, audioManager.walk);
+                }
+                stepTimer = stepInterval; // Reset timer
+            }
+        }
+        else
+        {
+            // Reset timer so the sound plays immediately upon moving again
+            stepTimer = 0f; 
+        }
     }
 }
