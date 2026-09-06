@@ -19,5 +19,9 @@ public class StageManager : MonoBehaviour {
 
     public void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
+
+        if (AudioManager.Instance != null) {
+            AudioManager.Instance.UpdateMusic();
+        }
     }
 }
