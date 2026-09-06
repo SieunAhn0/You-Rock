@@ -9,7 +9,6 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInputX;
 
-
     public Animator anim;
     private SpriteRenderer spriteRenderer;
 
@@ -61,7 +60,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (ColorManager.Instance != null && spriteRenderer != null)
         {
-            ColorManager.Instance.SavePlayerColor(spriteRenderer.color);
+            ColorManager.Instance.SavePlayerColor((Color32) spriteRenderer.color);
         }
     }
 
@@ -74,26 +73,28 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    // collision detection with guard
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Guard"))
         {
-            if (ColorManager.Instance.IsMatched == true) //stage unlocked
+            if (ColorManager.Instance.isMatched == true) //stage unlocked
             {
+                audioManager.PlaySFX(audioManager.win);
                 collision.collider.isTrigger = true;//make the guard collider isTrigger on
-
             }
             else
             {
                 Debug.Log("stage not unlocked"+spriteRenderer.color+"\n"
                     +ColorManager.Instance.targetNpcColor
                     );
+                audioManager.PlaySFX(audioManager.lose);
             }
 
         }
     }
 
-
+    // Manages walking sfx for player
     private void HandleFootsteps()
     {
         // Play footsteps only when moving horizontally

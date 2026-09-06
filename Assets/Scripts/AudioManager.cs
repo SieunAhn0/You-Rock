@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip drop1;
     public AudioClip drop2;
     public AudioClip drop3;
+    public AudioClip win;
+    public AudioClip lose;
 
     public float masterSoundVolume = 1;
     
@@ -64,6 +66,10 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.Play();
         }
+    }
+
+    public void PlaySFX(AudioClip clip) {
+        SFXSource.PlayOneShot(clip);
     }
 
     public void PlaySFX(float vol, AudioClip clip) {

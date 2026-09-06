@@ -363,7 +363,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: colors.Array.data[0].rgba
-      value: 14785129
+      value: 3501311
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.data[1].rgba
+      value: 10260597
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.data[2].rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6811709349168237196, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: m_LocalPosition.x
@@ -531,6 +539,8 @@ MonoBehaviour:
   drop1: {fileID: 8300000, guid: a969d1444393b4bdfa2bba6e467cabae, type: 3}
   drop2: {fileID: 8300000, guid: 5415e7138e3504b0995aa756f78f70e2, type: 3}
   drop3: {fileID: 8300000, guid: d50c5c95a2b884e41af67a79c6ad11c4, type: 3}
+  win: {fileID: 8300000, guid: 84ff40820216341b1b827d1f54211e9a, type: 3}
+  lose: {fileID: 8300000, guid: 0bb39a38c138a44afad99cdd73eae130, type: 3}
   masterSoundVolume: 1
 --- !u!4 &573901067
 Transform:
@@ -966,15 +976,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6159661888441047137, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_Color.b
-      value: 0.88140154
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6159661888441047137, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_Color.g
-      value: 0.6055059
+      value: 0.41568628
       objectReference: {fileID: 0}
     - target: {fileID: 6159661888441047137, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_Color.r
-      value: 0.41219175
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6719910415100226241, guid: ce088c3119cbe1c458b0736c1339a234, type: 3}
       propertyPath: m_LocalScale.x
@@ -1199,7 +1209,7 @@ GameObject:
   - component: {fileID: 1827090987}
   - component: {fileID: 1827090988}
   m_Layer: 0
-  m_Name: Guard
+  m_Name: Guard1
   m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

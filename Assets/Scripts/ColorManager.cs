@@ -3,15 +3,23 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
+    // basic setting of instances and managers
     public static ColorManager Instance;
+    AudioManager audioManager;
 
-    public bool IsMatched = false;
-
+    // default settings
+    [SerializeField]
+    private byte tolerance = 30;
+    public bool isMatched = false;
     public Color32[] colors;
     public Color32 targetNpcColor;
 
+    // color and renders
     public Color32 playerCurrentColor = Color.white;
+    private SpriteRenderer playerSprite;
     public bool hasSavedPlayerColor = false;
+    // [SerializeField]
+    // private SpriteRenderer currentStageNpcSprite;
 
     public void SavePlayerColor(Color32 col)
     {
@@ -21,7 +29,6 @@ public class ColorManager : MonoBehaviour
 
     private void Awake()
     {
-        targetNpcColor = colors[StageManager.Instance.stage - 1];
         if (Instance == null)
         {
             Instance = this;
@@ -39,40 +46,32 @@ public class ColorManager : MonoBehaviour
         targetNpcColor = npcColor;
         Debug.Log("Target NPC color getted");
     }
-    [SerializeField]
-    private SpriteRenderer currentStageNpcSprite;
-
-    //색 오차 허용 범위
-    [SerializeField]
-    private byte tolerance = 30;
-
-    private SpriteRenderer playerSprite;
-    private bool isMatched = false;
 
     void Start()
     {
+        Debug.Log("index:" + (StageManager.Instance.stage - 1));
+        targetNpcColor = colors[0];
+
+        int currentStage = StageManager.Instance.stage;
+        string npcName = "Guard" + currentStage.ToString();;
+        // currentStageNpcSprite = GameObject.Find(npcName).GetComponent<SpriteRenderer>();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
     {
-        // 이미 성공했거나, NPC가 인스펙터에 안 들었으면 실행 안 함
         if (isMatched) return;
 
-        //find spawned player
-        if(playerSprite==null)
-        {
-            GameObject player = GameObject.FindWithTag("Player");
-            if(player!=null)
-            {
-                playerSprite=player.GetComponentInChildren<SpriteRenderer>();
-            }
-            return; //플레이어 찾을 때 까지 대기
-        }
+        GameObject player = GameObject.FindWithTag("Player");
+        playerSprite=player.GetComponentInChildren<SpriteRenderer>();
 
-        if(IsColorSimilar(playerSprite.color, targetNpcColor, tolerance))
+        Debug.Log((Color32) playerSprite.color);
+        if(IsColorSimilar((Color32) playerSprite.color, targetNpcColor, tolerance))
         {
             isMatched = true;
-            OnMatchSuccess();
+            Debug.Log("color matched");
+            // OnMatchSuccess();
         }
     }
 
@@ -83,18 +82,12 @@ public class ColorManager : MonoBehaviour
                (Mathf.Abs(a.b - b.b) <= maxDiff);
     }
 
-    private void OnMatchSuccess()
-    {
-        IsMatched = true;
-        Debug.Log("color matched");
+    // private void OnMatchSuccess()
+    // {
+    //     Debug.Log("color matched");
 
-        Collider2D npcCollider = currentStageNpcSprite.GetComponent<Collider2D>();
-        if(npcCollider!=null)
-        {
-            npcCollider.isTrigger = true;
-        }
-
-
-
-    }
+    //     Collider2D npcCollider = currentStageNpcSprite.GetComponent<Collider2D>();
+    //     Debug.Log("deleting" + currentStageNpcSprite);
+    //     npcCollider.isTrigger = true;
+    // }
 }
