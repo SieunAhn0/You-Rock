@@ -315,19 +315,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: tolerance
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.b
-      value: 0.21698111
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.g
-      value: 0.21698111
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.r
-      value: 1
+      value: 0.9960785
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: playerCurrentColor.b
