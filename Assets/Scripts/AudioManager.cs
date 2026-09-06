@@ -33,14 +33,14 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Start() {
-        Debug.Log("first audio update to music");
+        // Debug.Log("first audio update to music");
         UpdateMusic();
     }
 
     // Called automatically every time a new scene loads
     private void OnSceneLoaded()
     {
-        Debug.Log("update audio after scene load");
+        // Debug.Log("update audio after scene load");
         UpdateMusic();
     }
 

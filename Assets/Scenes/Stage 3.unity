@@ -504,6 +504,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8a4def920061b4b4586db9f7c1f02ad0, type: 3}
   - {fileID: 8300000, guid: 7914d5a1ea7aa4cb4842227a186b6c33, type: 3}
   - {fileID: 8300000, guid: f5225a04fed8f4270b2a29e2978e94c3, type: 3}
+  - {fileID: 8300000, guid: cda69a5d32bc543d688f588ec6f0978e, type: 3}
   walk: {fileID: 8300000, guid: 437b9cfe69b054a68a48e7ea48edabc3, type: 3}
   drop1: {fileID: 8300000, guid: a969d1444393b4bdfa2bba6e467cabae, type: 3}
   drop2: {fileID: 8300000, guid: 5415e7138e3504b0995aa756f78f70e2, type: 3}
@@ -820,6 +821,7 @@ MonoBehaviour:
   - Stage 1
   - Stage 2
   - Stage 3
+  - Ending
 --- !u!70 &1244558756
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1167,7 +1169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1827090987
 Transform:
   m_ObjectHideFlags: 0
@@ -1177,7 +1179,7 @@ Transform:
   m_GameObject: {fileID: 1827090985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16, y: -1.96, z: 0}
+  m_LocalPosition: {x: -4.94, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
