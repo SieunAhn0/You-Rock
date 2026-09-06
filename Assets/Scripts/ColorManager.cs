@@ -5,6 +5,8 @@ public class ColorManager : MonoBehaviour
 {
     public static ColorManager Instance { get; private set; }
 
+    public bool IsMatched { get; private set; } = false;
+
     public Color targetNpcColor = Color.white;
 
     private void Awake()
@@ -78,6 +80,7 @@ public class ColorManager : MonoBehaviour
 
     private void OnMatchSuccess()
     {
+        IsMatched = true;
         Debug.Log("color matched");
 
         Collider2D npcCollider = currentStageNpcSprite.GetComponent<Collider2D>();

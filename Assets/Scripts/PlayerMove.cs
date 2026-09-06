@@ -50,7 +50,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
     }
 
@@ -60,30 +60,26 @@ public class PlayerMove : MonoBehaviour
         anim.SetFloat("playerSpeed", Mathf.Abs(rb.linearVelocityX));
         // Handle continuous footstep sound playback
         HandleFootsteps();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Guard"))
         {
-            Debug.Log("Guard decteted");
-            if (clearTrigger == true) //stage unlocked
+            if (ColorManager.Instance.IsMatched == true) //stage unlocked
             {
                 collision.collider.isTrigger = true;//make the guard collider isTrigger on
 
             }
             else
             {
-                Debug.Log("stage not unlocked");
+                Debug.Log("stage not unlocked"+spriteRenderer.color);
             }
 
         }
     }
 
-    void StageColor()
-    {
-        
-    }
 
     private void HandleFootsteps()
     {
