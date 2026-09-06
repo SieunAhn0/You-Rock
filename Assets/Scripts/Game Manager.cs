@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
     public int stage = 1;
 
     private void Awake() {
+        Debug.Log("Current stage is: " + stage);
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

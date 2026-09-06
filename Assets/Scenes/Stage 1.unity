@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 2022436457}
   m_Layer: 0
   m_Name: Stage2Door
-  m_TagString: door
+  m_TagString: nextStage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
