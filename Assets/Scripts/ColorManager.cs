@@ -38,7 +38,7 @@ public class ColorManager : MonoBehaviour
         targetNpcColor = npcColor;
         Debug.Log("Target NPC color getted");
     }
-
+    [SerializeField]
     private SpriteRenderer currentStageNpcSprite;
 
     //색 오차 허용 범위
