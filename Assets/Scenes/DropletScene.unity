@@ -158,6 +158,8 @@ MonoBehaviour:
   drop1: {fileID: 8300000, guid: a969d1444393b4bdfa2bba6e467cabae, type: 3}
   drop2: {fileID: 8300000, guid: 5415e7138e3504b0995aa756f78f70e2, type: 3}
   drop3: {fileID: 8300000, guid: d50c5c95a2b884e41af67a79c6ad11c4, type: 3}
+  win: {fileID: 0}
+  lose: {fileID: 0}
   masterSoundVolume: 1
 --- !u!4 &262702554
 Transform:
@@ -211,7 +213,7 @@ MonoBehaviour:
   - {fileID: 8439610896034016747, guid: 4f65d176c75c2284a89bea40e16e5f6c, type: 3}
   minX: -3
   maxX: 3
-  spawnrate: 0.7
+  spawnrate: 0.8
 --- !u!4 &306442428
 Transform:
   m_ObjectHideFlags: 0
@@ -872,7 +874,7 @@ MonoBehaviour:
   - {fileID: 8439610896034016747, guid: 4f65d176c75c2284a89bea40e16e5f6c, type: 3}
   minX: -3
   maxX: 3
-  spawnrate: 0.9
+  spawnrate: 1.2
 --- !u!4 &919013091
 Transform:
   m_ObjectHideFlags: 0
@@ -1051,7 +1053,7 @@ MonoBehaviour:
   - {fileID: 8439610896034016747, guid: ffe0a65322e5c47458b0a577fbc6ebd7, type: 3}
   minX: -3
   maxX: 3
-  spawnrate: 1
+  spawnrate: 1.5
 --- !u!4 &1802461031
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class DropletSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Invoke("Spawn", 2f);
+        Invoke("Spawn", 1.5f);
     }
 
     void Spawn() {
