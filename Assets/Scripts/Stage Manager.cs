@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
-    public static GameManager Instance;
+public class StageManager : MonoBehaviour {
+    public static StageManager Instance;
     public int stage = 1;
 
     private void Awake() {

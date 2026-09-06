@@ -10,9 +10,9 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if (gameObject.CompareTag("nextStage")) {
-                GameManager.Instance.stage++;
+                StageManager.Instance.stage++;
             }
-            GameManager.Instance.LoadScene(DropletScene);
+            StageManager.Instance.LoadScene(DropletScene);
         }
     }
     

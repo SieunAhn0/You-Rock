@@ -10,7 +10,7 @@ public class BackgroundManager : MonoBehaviour
     {
         quadRenderer = GetComponent<Renderer>();
 
-        int currentStage = GameManager.Instance.stage;
+        int currentStage = StageManager.Instance.stage;
         int index = currentStage - 1;
 
         quadRenderer.material.mainTexture = backgroundTextures[index];
