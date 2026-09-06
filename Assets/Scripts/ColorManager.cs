@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-    public static ColorManager Instance { get; private set; }
+    public static ColorManager Instance;
 
-    
+    public bool IsMatched = false;
 
-    public bool IsMatched { get; private set; } = false;
+    public Color32[] colors;
+    public Color32 targetNpcColor;
 
-    public Color targetNpcColor = Color.white;
-    public Color playerCurrentColor = Color.white;
+    public Color32 playerCurrentColor = Color.white;
     public bool hasSavedPlayerColor = false;
 
-    public void SavePlayerColor(Color col)
+    public void SavePlayerColor(Color32 col)
     {
         playerCurrentColor = col;
         hasSavedPlayerColor = true;
@@ -21,6 +21,7 @@ public class ColorManager : MonoBehaviour
 
     private void Awake()
     {
+        targetNpcColor = colors[StageManager.Instance.stage - 1];
         if (Instance == null)
         {
             Instance = this;
@@ -33,7 +34,7 @@ public class ColorManager : MonoBehaviour
         }
     }
 
-    public void SetTargetColor(Color npcColor)
+    public void SetTargetColor(Color32 npcColor)
     {
         targetNpcColor = npcColor;
         Debug.Log("Target NPC color getted");
@@ -43,25 +44,19 @@ public class ColorManager : MonoBehaviour
 
     //색 오차 허용 범위
     [SerializeField]
-    private float tolerance = 0.15f;
+    private byte tolerance = 30;
 
     private SpriteRenderer playerSprite;
     private bool isMatched = false;
 
-
     void Start()
     {
-        
     }
 
-
-    
-
-    // Update is called once per frame
     void Update()
     {
         // 이미 성공했거나, NPC가 인스펙터에 안 들었으면 실행 안 함
-        if (isMatched || currentStageNpcSprite == null) return;
+        if (isMatched) return;
 
         //find spawned player
         if(playerSprite==null)
@@ -81,7 +76,7 @@ public class ColorManager : MonoBehaviour
         }
     }
 
-    private bool IsColorSimilar(Color a, Color b, float maxDiff)
+    private bool IsColorSimilar(Color32 a, Color32 b, byte maxDiff)
     {
         return (Mathf.Abs(a.r - b.r) <= maxDiff) &&
                (Mathf.Abs(a.g - b.g) <= maxDiff) &&

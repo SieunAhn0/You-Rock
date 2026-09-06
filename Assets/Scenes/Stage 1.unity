@@ -319,15 +319,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.b
-      value: 0.6666667
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.g
-      value: 0.6666667
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: targetNpcColor.r
-      value: 0.9960785
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: playerCurrentColor.b
@@ -345,6 +349,22 @@ PrefabInstance:
       propertyPath: currentStageNpcSprite
       value: 
       objectReference: {fileID: 1780194054}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.data[0].b
+      value: 0.882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.data[0].g
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.data[0].r
+      value: 0.41176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580293608614691900, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
+      propertyPath: colors.Array.data[0].rgba
+      value: 14785129
+      objectReference: {fileID: 0}
     - target: {fileID: 6811709349168237196, guid: 0c12b62fe9f168a4ba5dda0db08c7588, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.30765

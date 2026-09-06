@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
     // update the music to match the current stage
     public void UpdateMusic() {
         int index = StageManager.Instance.stage - 1;
-        Debug.Log("Current Audio index is: " + index);
+        // Debug.Log("Current Audio index is: " + index);
 
         AudioClip nextClip = tracks[index];
 
