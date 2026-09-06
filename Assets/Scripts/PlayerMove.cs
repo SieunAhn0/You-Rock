@@ -23,8 +23,6 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-
-        
     }
 
     // New Input System 콜백 (Player Input 컴포넌트의 Send Messages로 연결)

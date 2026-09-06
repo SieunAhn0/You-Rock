@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 172517436}
   - component: {fileID: 172517435}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 225320006}
   - component: {fileID: 225320005}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Stage Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,11 +420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.57
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.344
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.z
@@ -460,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7013636036742709436, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: spawnX
-      value: 5.57
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7013636036742709436, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: spawnY
@@ -504,6 +504,8 @@ MonoBehaviour:
   SFXSource: {fileID: 864802846}
   tracks:
   - {fileID: 8300000, guid: 8a4def920061b4b4586db9f7c1f02ad0, type: 3}
+  - {fileID: 8300000, guid: 7914d5a1ea7aa4cb4842227a186b6c33, type: 3}
+  - {fileID: 8300000, guid: f5225a04fed8f4270b2a29e2978e94c3, type: 3}
   walk: {fileID: 8300000, guid: 437b9cfe69b054a68a48e7ea48edabc3, type: 3}
   drop1: {fileID: 8300000, guid: a969d1444393b4bdfa2bba6e467cabae, type: 3}
   drop2: {fileID: 8300000, guid: 5415e7138e3504b0995aa756f78f70e2, type: 3}
@@ -665,7 +667,7 @@ Transform:
   m_GameObject: {fileID: 605862126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.53, y: -2.8, z: 0}
+  m_LocalPosition: {x: 7.53, y: -2.8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1191,7 +1193,7 @@ Transform:
   m_GameObject: {fileID: 1827090985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -1.96, z: 0}
+  m_LocalPosition: {x: -3.78, y: -1.96, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1274,8 +1276,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2bd453e45d41433ebc25ecab4169f04, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  nextScenes: []
+  m_EditorClassIdentifier: Assembly-CSharp::DoorTrigger
+  nextScenes:
+  - DropletScene
+  - Stage 1
+  - Stage 2
+  - Stage 3
 --- !u!70 &2022436458
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1382,7 +1388,7 @@ Transform:
   m_GameObject: {fileID: 2022436456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -2.8, z: 0}
+  m_LocalPosition: {x: -7, y: -2.8, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
