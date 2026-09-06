@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2813159157896793779}
   - component: {fileID: 3713578099404282772}
   - component: {fileID: 5880802576727762079}
-  - component: {fileID: 8024705609982925367}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -145,18 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   moveSpeed: 6
   anim: {fileID: 5113002395063050352}
---- !u!114 &8024705609982925367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023277036393567106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f88252b01af3457b997548f34f40f4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision_temp
 --- !u!1 &6720296547539361565
 GameObject:
   m_ObjectHideFlags: 0
