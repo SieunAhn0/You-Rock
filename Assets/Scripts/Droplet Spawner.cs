@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
+public class DropletSpawner : MonoBehaviour
 {
     [Header("References")]
     public GameObject[] gameObjects;
@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Invoke("Spawn", spawnrate);
+        Invoke("Spawn", 3f);
     }
 
     void Spawn() {
