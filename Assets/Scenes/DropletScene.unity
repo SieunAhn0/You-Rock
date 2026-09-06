@@ -507,24 +507,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1147924546 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2023277036393567106, guid: aa47ed21a96258140aac3684025c4555, type: 3}
-  m_PrefabInstance: {fileID: 1714040962}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1147924553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147924546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 869aa7f6095a90546bed11e0c809146e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
---- !u!1001 &1714040962
+--- !u!1001 &1415553860
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -532,29 +515,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1883437667362800186, guid: aa47ed21a96258140aac3684025c4555, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883437667362800186, guid: aa47ed21a96258140aac3684025c4555, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1883437667362800186, guid: aa47ed21a96258140aac3684025c4555, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2023277036393567106, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.004006505
+      value: 0.00401
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6736963
+      value: -0.6737
       objectReference: {fileID: 0}
     - target: {fileID: 5882650708872207065, guid: aa47ed21a96258140aac3684025c4555, type: 3}
       propertyPath: m_LocalPosition.z
@@ -591,10 +562,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2023277036393567106, guid: aa47ed21a96258140aac3684025c4555, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1147924553}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa47ed21a96258140aac3684025c4555, type: 3}
 --- !u!1 &2009817376
 GameObject:
@@ -1121,4 +1089,4 @@ SceneRoots:
   - {fileID: 919013091}
   - {fileID: 2033620151}
   - {fileID: 676977062}
-  - {fileID: 1714040962}
+  - {fileID: 1415553860}
