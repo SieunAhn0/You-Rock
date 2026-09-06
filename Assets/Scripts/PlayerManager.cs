@@ -41,7 +41,16 @@ public class PlayerManager : MonoBehaviour
 
             if(targetSprite!=null)
             {
-                playerSpriteRenderer.color = targetSprite.color;
+                //playerSpriteRenderer.color = targetSprite.color;//change into doplet color
+
+                SpriteRenderer target = collider.GetComponent<SpriteRenderer>();
+
+                if(target !=null && playerSpriteRenderer != null)
+                {
+                    playerSpriteRenderer.color = Color.Lerp(playerSpriteRenderer.color, target.color, 0.2f);
+                }
+
+
             }
             Destroy(collider.gameObject);//doplet delete
         }
