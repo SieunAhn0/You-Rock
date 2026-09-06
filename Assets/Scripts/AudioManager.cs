@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     [Header("Tracks")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
+    public AudioClip[] dropletBGMs;
 
     [Header("SFX")]
     public AudioClip[] tracks;
@@ -36,27 +37,55 @@ public class AudioManager : MonoBehaviour
 
     private void Start() {
         // Debug.Log("first audio update to music");
-        UpdateMusic();
+        UpdateStageMusic();
     }
 
     // Called automatically every time a new scene loads
     private void OnSceneLoaded()
     {
         // Debug.Log("update audio after scene load");
-        UpdateMusic();
+        if (SceneManager.GetActiveScene().name == "DropletScene") {
+            UpdateDropletMusic();
+        } else {
+            UpdateStageMusic();
+        }
     }
 
     // update the music to match the current stage
-    public void UpdateMusic() {
+    public void UpdateStageMusic() {
         int index = StageManager.Instance.stage - 1;
         // Debug.Log("Current Audio index is: " + index);
 
-        AudioClip nextClip = tracks[index];
+        AudioClip stageClip = tracks[index];
 
         // Only assign and play if the clip is different or not currently playing
-        if (musicSource.clip != nextClip)
+        if (musicSource.clip != stageClip)
         {
-            musicSource.clip = nextClip;
+            musicSource.clip = stageClip;
+            musicSource.volume = masterSoundVolume * 0.7f;
+            if (index == 3) {
+                musicSource.volume = masterSoundVolume;
+            }
+            musicSource.loop = true;
+            musicSource.Stop();
+            musicSource.Play();
+        } 
+        else if (!musicSource.isPlaying)
+        {
+            musicSource.Play();
+        }
+    }
+
+    public void UpdateDropletMusic() {
+        int index = StageManager.Instance.stage - 1;
+        Debug.Log("Current DroopletAudio index is: " + index);
+
+        AudioClip dropletClip = dropletBGMs[index];
+
+        // Only assign and play if the clip is different or not currently playing
+        if (musicSource.clip != dropletClip)
+        {
+            musicSource.clip = dropletClip;
             musicSource.volume = masterSoundVolume * 0.7f;
             musicSource.loop = true;
             musicSource.Stop();

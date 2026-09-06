@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: spawnY
       value: -2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7013636036742709436, guid: aa47ed21a96258140aac3684025c4555, type: 3}
+      propertyPath: lerpFactor
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -530,11 +534,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 1357713378}
   SFXSource: {fileID: 864802846}
+  dropletBGMs:
+  - {fileID: 8300000, guid: cda69a5d32bc543d688f588ec6f0978e, type: 3}
+  - {fileID: 8300000, guid: 7914d5a1ea7aa4cb4842227a186b6c33, type: 3}
+  - {fileID: 8300000, guid: ad4cb5b8eb7144109b49d8ac18c24959, type: 3}
   tracks:
   - {fileID: 8300000, guid: 8a4def920061b4b4586db9f7c1f02ad0, type: 3}
   - {fileID: 8300000, guid: 7914d5a1ea7aa4cb4842227a186b6c33, type: 3}
   - {fileID: 8300000, guid: f5225a04fed8f4270b2a29e2978e94c3, type: 3}
-  - {fileID: 8300000, guid: 25d6255157b3840ab95c75399843fa69, type: 3}
+  - {fileID: 8300000, guid: e1cdf7f91523f4a468dabfb45cd58da0, type: 3}
   walk: {fileID: 8300000, guid: 437b9cfe69b054a68a48e7ea48edabc3, type: 3}
   drop1: {fileID: 8300000, guid: a969d1444393b4bdfa2bba6e467cabae, type: 3}
   drop2: {fileID: 8300000, guid: 5415e7138e3504b0995aa756f78f70e2, type: 3}

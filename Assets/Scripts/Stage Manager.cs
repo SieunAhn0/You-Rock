@@ -21,7 +21,11 @@ public class StageManager : MonoBehaviour {
         SceneManager.LoadScene(sceneName);
 
         if (AudioManager.Instance != null) {
-            AudioManager.Instance.UpdateMusic();
+            if (sceneName == "DropletScene") {
+                AudioManager.Instance.UpdateDropletMusic();
+            } else {
+                AudioManager.Instance.UpdateStageMusic();
+            }
         }
     }
 }

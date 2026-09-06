@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
     public float spawnX;
     public float spawnY;
 
-
+    public float lerpFactor;
     void Awake()
     {
         transform.position = new Vector3(spawnX, spawnY, 0f);
@@ -41,7 +41,7 @@ public class PlayerManager : MonoBehaviour
 
                 if(target !=null && playerSpriteRenderer != null)
                 {
-                    playerSpriteRenderer.color = Color.Lerp(playerSpriteRenderer.color, target.color, 0.2f);
+                    playerSpriteRenderer.color = Color.Lerp(playerSpriteRenderer.color, target.color, lerpFactor);
                 }
 
 
