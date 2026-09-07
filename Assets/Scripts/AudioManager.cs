@@ -86,7 +86,12 @@ public class AudioManager : MonoBehaviour
         if (musicSource.clip != dropletClip)
         {
             musicSource.clip = dropletClip;
-            musicSource.volume = masterSoundVolume * 0.7f;
+            // if (index == 3) {
+            //     musicSource.volume = masterSoundVolume * 3f;
+            // } else {
+            //     musicSource.volume = masterSoundVolume;
+            // }
+            musicSource.volume = masterSoundVolume;
             musicSource.loop = true;
             musicSource.Stop();
             musicSource.Play();
